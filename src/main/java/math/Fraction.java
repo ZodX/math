@@ -33,16 +33,15 @@ public class Fraction extends Number implements Cloneable {
      * @throws ArithmeticException if the denominator is zero
      */
     public Fraction(int numerator, int denominator) throws ArithmeticException {
-		if (denominator == 0) {
-			throw new ArithmeticException("Division by zero");
-		}
-		if (denominator > 0) {
-			this.numerator = numerator;
-			this.denominator = denominator;
-		} else {
-			this.numerator = -numerator;
-			this.denominator = -denominator;
-		}
+        if (denominator == 0)
+            throw new ArithmeticException("Division by zero");
+        if (denominator > 0){
+            this.numerator = numerator;
+            this.denominator = denominator;
+        } else {
+            this.numerator= -numerator;
+            this.denominator = -denominator;
+        }
     }
 
     /**
@@ -80,8 +79,7 @@ public class Fraction extends Number implements Cloneable {
      * @return a fraction that represents the result
      */
     public Fraction add(int n) {
-        // TODO
-        return null;
+        return new Fraction(numerator + n * denominator, denominator);
     }
 
     /**
